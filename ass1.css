@@ -1,0 +1,158 @@
+body{
+	margin-right: 100px;
+	 margin-left: 100px;
+	 background-image:url('back-ground3.jpg');
+	  background-size:100%
+}
+ul {
+    list-style-type: none;
+    margin-left: 0px;
+	margin-right:0px;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #d7dfe0;
+	text-align:center;
+}
+
+.mySlides {
+	display:none;
+	}
+	
+#large-pizzas img{
+	width:360px;
+	height:360px;
+}
+
+
+	
+#coolSlides{
+	margin-left:30px;
+	margin-right:30px;
+}
+li {
+    float:left;
+}
+#colourThis{
+	color:#ef5934;
+}
+#cart-total{
+	color:#ef5934;
+}
+
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+	font-size:22px;
+    padding: 14px 16px;
+    text-decoration: none;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:80px;
+	margin-right:80px;
+	
+	
+}
+
+li a:hover {
+    background-color: white;
+}
+.container {
+    width: 100%;
+	height: 100%;
+   
+}
+
+#logo{
+	overflow:hidden;
+}
+
+
+img.header{
+
+  float:left;
+ 
+}
+
+h1.header{
+	margin-right:20%;	
+	margin-top:8%;
+	
+  
+}
+h1.header2{
+	margin-right:20%;	
+	margin-top:2%;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #ef5934;
+    clear: left;
+	
+}
+h2.bodycontent{
+	margin:10px;
+	
+}
+.chef{
+	margin-left:30px;
+}
+
+.coolSlides{
+	margin:30px;
+	
+}
+
+#content{
+	background-color:#d7dfe0;
+	border:5px;
+	
+}
+
+img.header2{
+	float:right;
+}
+table{
+	margin:10px;
+}
+
+#history p{
+	font-size:22px;
+	padding:10px;
+}
+
+#history h2{
+	padding:10px;
+}
+
+.button {
+	margin-left:10px;
+	margin-bottom:5px;
+}
+
+
+#pizza-choices{
+	font-size:22px;
+	margin-left:10px;
+
+}
+
+#pizza-choices img{
+	float:left;
+	width:280px;
+	height:280px;
+}
+
+article {
+    margin-left: 0px;
+    padding: 0px;
+    overflow: hidden;
+	
+}
+#cart1{
+	margin-left:13px;
+	margin-bottom:15px;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--Ben O'Donnell-->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ass1.css">
+	<title>Pizza Place</title> <!--Page title-->
+</head>
+<body>
+
+	
+	<div class="container">	<!--Class containing the center of the website-->
+		<header>
+			<div id = "logo"> <!--Div id to hold social media logos-->
+				<img class="header" src= "pizza-place.jpg" alt ="Pizza" width = "200px"; height = "200px">
+				<img class= "header2" src = "facebook-icon-5.png" alt = "facebook" width = "60px"; height = "60px">
+				<img class= "header2" src = "Twitter-icon.png" alt = "twitter" width = "60px"; height = "60px">
+				<img class= "header2" src = "Instagram.png" alt = "Instagram" width = "60px"; height = "60px">
+				
+				
+				<center><em><h1 class="header">Ben's Pizza Place</h1></em></center> <!--Company name-->
+				<center><em><h1 class="header2">Pizza Created With Passion</h1></em></center> <!--Slogan-->
+			</div>
+		</header>
+  		<article>
+		
+	<center>
+		
+		<ul>
+			<li><a class="active" href="#home">Home</a></li>   <!--navagation bar-->   
+			<li><a href="#Order-Now">Order Now</a></li>       
+			<li><a href="#contact">Contact</a></li>      
+			<li><a href="#about">About</a></li>      
+		</ul>
+		
+	</center>
+	<section id="content"> <!--Section Div to hold content-->
+		
+	<div id = "history">
+		<a name = "about"> <!--About us section-->
+		<center><h2>Brief History About Us</h2></center>
+		<p>Here at Ben's Pizza Place, we have managed to perfect our pizza so that everybody, even people who resent pizza can enjoy it.
+		 I (Ben) Opened up this place in March 2014, after traveling the world reviewing and working in various resteraunts, tasting different
+		 cousines and shaddowing some of the best chefs not just in Italy, everywhere! From Denmark to Pakistan I have seen it all.
+		 I decided in 2010 that I wanted to open up my own resteraunt and saw a gap in the market for a really good quality pizza place
+		 where you can sit down with your family or friends or get it delivered to your front door. I searched for the best chefs internationlly
+		 and am very proud of what we have accomplished as a team. We are very keen on maintaining a high standard of food and encourage everyone
+		 to try it out. We also give great discounts!</p>
+		 <!--images of 3 chefs that work in the resteraunt-->
+		 <img class="chef" src= "pizza-chef.jpg" alt ="Pizza" width = "300px"; height = "200px" border = "5px"> 
+		  <img class="chef" src= "chef1.jpg" alt ="Pizza" width = "300px"; height = "200px" border = "5px">
+		  <img class="chef" src= "chef2.jpg" alt ="Pizza" width = "300px"; height = "200px" border = "5px">
+		  
+		 <!--slideshow of pizzas-->
+		<div class="coolSlides" style="max-width:500px">
+		<img class="mySlides" src= "Pizza-2.jpg" alt ="Pizza" width = "198%"; height = "550px" border = "5px"> 
+		 <img class="mySlides" src= "pizza-3.jpg" alt ="Pizza" width = "198%"; height = "550px" border = "5px">
+		 <img class="mySlides" src= "stove.jpg" alt ="Pizza" width = "198%"; height = "550px" border = "5px">
+		</div>
+		
+		
+	</div>
+		<a name = "Order-Now"> <!--Order now inner html called here-->
+			<center><h2 class = "bodycontent">Please follow instructions below to get a pizza Delivered</h2></center>
+			<h2 class = "bodycontent">Personal Details</h2>
+			<form method="post" action="http://atlantis.cit.ie/displayvalues.php"><!--The PHP server this form is sending information to-->
+			
+			
+
+				<input type="hidden" name="recipient" value="info@atlantis.cit.ie">
+				<input type="hidden" name="subject" value="feedback form">
+				<input type="hidden" name="redirect" value="main.html">
+				
+				
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+				<script type="text/javascript" src="ass1.js"></script> <!--Calling the javascript file-->
+	
+					
+				<table border="2"> <!--Start of table with border 2-->
+				<tr>
+					<p>
+					<td><label>First Name:</td>
+						<td><input name="first-name" id = "fname" type="text" size="35" maxlength="30" required> 
+						<!--required means that they must type it or an error message will appear-->
+					</label></td>
+					</p>
+				</tr>
+				
+				<tr>
+					<td><label>Second Name:</td>
+						<td><input name="second-name" type="text" size="35" maxlength="30" required>
+					</label></td>
+				</tr>
+				
+				
+					<tr>
+						<td><label>E-mail address:</td>
+							<td><input name="email" type="text" size="35" maxlength="30" required>
+						</label></td>
+					</tr>
+					<tr>
+						<div id = "discountAnswer"> <!--Id that gets the outcome of the user and displays discount if appropriate-->
+							<td>Please tick if you are a C.I.T student(Card requested): </td>
+							<label>
+								<!--calling the onclick function to get total price with or without discount-->
+								<td><input type="radio" id = "yesNo" name="CIT-Student" value="Yes" onclick = "displayShoppingCart()"> Yes (10% Discount)
+								<input type="radio" id = "yesNo1" name="CIT-Student" value="No" onclick = "displayShoppingCart()"> No<br></td>
+							</label>
+						</div>
+					</tr>
+					
+					<tr>
+						<td><label>Address Line 1:</td>
+							<td><input name="Address line 1" type="text" size="35" maxlength="30" required>
+						</label></td>
+					</tr>
+					
+					<tr>
+						<td><label>Address Line 2:(Optional)</td> <!--Address line 2 is optional-->
+							<td><input name="Address line 2" type="text" size="35" maxlength="30">
+						</label></td>
+					</tr>
+				
+						
+				
+					<tr>
+						<td><label>Town</td> <!--Dropdown of all the delivery locations-->
+						<td><select name ="town">
+						<option>Bandon</option>
+						<option>Bishopstown</option>
+						<option>Carrigiline</option>
+						<option>Carrightohil</option>
+						<option>Cobh</option>
+						<option>Duglas</option>
+						<option>Glonthaune</option>
+						<option>Little Island</option>
+						<option>Mallow </option>
+						<option>Midleton</option>
+						<option>Rush Brook</option>
+						<option>Togher</option>
+					</select></td>
+					</tr>
+					
+				</table>
+					
+					<table border="2">
+					<!--New table for card details-->
+					<h2 class = "bodycontent">Credit Card Details</h2>
+					<tr>
+						<td><label>Credit Card Number:</td>
+							<td><input name="card-number" type="text" size="35" maxlength="20" required>
+						</label></td>
+					</tr>
+		
+					<tr>
+						<td><label>Expiry Date:DD/MM/YYYY</td>
+							<td><input name="Expiry" type="text" size="35" maxlength="10" required>
+						</label></td>
+					</tr>
+					
+					<tr>
+						<td><label>Security number(e.g 123):</td>
+							<td><input name="security-no" type="text" size="35" maxlength="3" required>
+						</label></td>
+					</tr>
+					
+					</table>
+					
+					<h2 class = "bodycontent">Please Chose what kind of pizza you would like:</h2>
+					<!--Displaying the list of pizzas. Radio button changes the pizza image and add to cart adds it to the cart-->
+				
+				<div id = "pizza-choices">
+				
+					<img src = "plain-pizza.png" alt="food" id ="pizzaImage" width = "280px;" height = "280px;" onclick = "change();">
+				
+					<form action="change()">
+					<!--Small Pizzas-->
+						<input id = 'plain' type="radio" name="pizza" value="plain" onclick = "change();" checked>Margerita Pizza(10")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Margerita','Small',10.00)"/><br>
+						<input id = 'pepperoni' type="radio" name="pizza" value="pepperoni" onclick = "change();">Pepperoni Pizza(10")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pepperoni','Small',11.00)"/><br>
+						<input id = 'pepperandham' type="radio" name="pizza" value="pepperandham" onclick = "change();">Pepperoni and Ham Pizza(10")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pepperoni/Ham','Small',11.50)"/><br>
+						<input id = 'ham' type="radio" name="pizza" value="ham" onclick = "change();">Ham Pizza(10")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Ham','Small',11.00)"/><br>
+						<input id = 'pineapple' type="radio" name="pizza" value="ham" onclick = "change();">Pineapple Pizza(10")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pineapple','Small',10.00)"/><br>
+						<hr>
+					<div id = "large-pizzas">
+					<!--Large Pizzas-->
+						<input id = 'plainL' type="radio" name="pizza" value="plain" onclick = "change();">Margerita Pizza(12")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Margerita','Large',14.00)"/><br>
+						<input id = 'pepperoniL' type="radio" name="pizza" value="pepperoni" onclick = "change();">Pepperoni Pizza(12")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pepperoni','Large',15.00)"/><br>
+						<input id = 'pepperandhamL' type="radio" name="pizza" value="pepperandham" onclick = "change();">Pepperoni and Ham Pizza(12")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pepperoni/Ham','Large',15.50)"/><br>
+						<input id = 'hamL' type="radio" name="pizza" value="ham" onclick = "change();">Ham Pizza(12")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Ham','Large',15.00)"/><br>
+						<input id = 'pineappleL' type="radio" name="pizza" value="pineapple" onclick = "change();">Pineapple Pizza(12")
+						<input type="button" id = "cart" value="Add to cart" onclick="AddtoCart('Pineapple','Large',14.00)"/><hr>
+					</div>
+					<p><b>Your Shopping Cart</b><i>(Discount applied in 'Total Price' if applicable)</i></p>
+	
+					
+				<td valign="top"> <!--The shopping cart that is displayed-->
+					<table cellpadding="4" cellspacing="4" border="1" id="orderedProductsTbl">
+						<thead>
+							<tr>
+								<td id = "colourThis">
+									Type
+								</td>
+								<td id = "colourThis">
+									Size
+								</td>
+								<td id = "colourThis">
+									Price
+								</td>
+							</tr>
+						</thead>
+							<tbody id="orderedProductsTblBody">
+
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3" align="right" id="cart_total">
+										Total Price
+									</td>
+								</tr>
+							</tfoot>
+					</table>
+				</td>
+						
+					</form>				
+					
+						<!--All of these are buttons that have different effects-->
+						<input class ="button" type="submit" value="Submit">
+						<input class ="button" type="reset" value="Clear"><br>
+						<input type="button" id = "cart1" value="Remove Last Item" onclick="removeFromCart()"/><!--Removes the last item-->
+				</div>
+				
+			</form>
+					
+						
+		</section>
+	
+  		</article>
+		<a name = "contact"> <!--Inner html for contact information-->
+		<br>
+		<center>
+			<footer> <!--bottom of the page containing the contact info-->
+				<h2><i>E-mail:</i><a href="mailto:benspizza@gmail.com">benspizza@gmail.com</h2></a>
+				<h2><i>Phone Number:</i> <a href="mailto:+353867546384">0867546384</h2></a>
+			</footer>
+		</center>
+
+
+
+
+</body>
+</html>
